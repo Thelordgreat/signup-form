@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    background-color: #34495e;
+    height: 80px;
+    padding: 0 80px;
+    width: 100%;
+}
+
+.navbar .nav-logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar .nav-menu a{
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+#toggle {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#toggle{
+    color: #fff;
+    font-size: 25px;
+}
+
+#toggle2{
+    position: absolute;
+    top: 65%;
+    right: 33%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url(./download.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#toggle2.hide{
+    background: url(./eye2.png);
+    background-size: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    #toggle {
+        opacity: 1;
+        right: 15px;
+    }
+
+    .navbar{
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        width: 80%;
+        height: 220px;
+        margin: auto;
+        top: 70px;
+        padding: 10px 0;
+        background-color: #34495e;
+        flex-direction: column;
+        opacity: 1;
+        transition: 0.1s ease;
+        display: none;
+    }
+
+    .nav-menu a{
+        display: block;
+        align-items: center;
+        text-align: center;
+        padding: 50px 0;
+        line-height: 2;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
